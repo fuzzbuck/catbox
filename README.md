@@ -11,4 +11,4 @@ Basic implementation:
 DISCLAIMER:
 I am not responsible for whatever anybody does with this, this is simply a set of tools used to easily & seamlessly interact with FunCaptcha
 for an easier & better experience and integration into user applications. It is against the Funcaptcha Terms of Service to automate the solving
-process & I do not promote doing that. The sole purpose of this application is to provide an easy access to the API for easy integration into applications that are not web browsers.
+process & I do not promote doing that. The sole purpose of this framework is to provide an easy access to the API for easy integration into applications that are not web browsers.

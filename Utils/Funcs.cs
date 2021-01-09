@@ -307,7 +307,6 @@ namespace catbox.Utils
             x = yy;
             y = xx;
             
-            
 
             py = (y / 200).ToString("0.00");
             px = (x / 300).ToString("0.00");
@@ -316,6 +315,40 @@ namespace catbox.Utils
             string ry = (rnd.Next(1848907, 677083015).ToString() + rnd.Next(1848907, 677083015).ToString()).Substring(rnd.Next(1, 17));
 
             // [NOTE; funcaptcha changes this a lot, you have to manually check what kind of format guesses are being sent as]
+            /*
+             * Various methods used by arkose to serialize guesses
+             * method_1: serializeGuesses((function(e) {
+                    var t = e.x;
+                    return {
+                        x: e.y,
+                        y: t
+                    }
+                }
+                )),
+                method_2: serializeGuesses((function(e) {
+                    var t = e.x;
+                    return {
+                        x: t,
+                        y: (e.y + t) * t
+                    }
+                }
+                )),
+                method_3: serializeGuesses((function(e) {
+                    return {
+                        a: e.x,
+                        b: e.y
+                    }
+                }
+                )),
+                method_4: serializeGuesses((function(e) {
+                    return [e.x, e.y]
+                }
+                )),
+                method_5: serializeGuesses((function(e) {
+                    var t = e.x;
+                    return [e.y, t].map(Math.sqrt)
+                }
+             */
             
             //return $"[{x},{y}.0078125]";
             //return "{\"x\":" + y + ",\"y\":" + x + "}";
